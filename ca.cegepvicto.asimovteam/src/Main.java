@@ -12,7 +12,7 @@ public class Main {
     public static void main( String[] args ) {
         //Définition des paramêtres de connexion
         String host = "localhost";
-        int port = 6666;
+        int port = 44000;
 
         //Éssai de connexion au serveur
         try {
@@ -20,8 +20,8 @@ public class Main {
 
             PrintWriter outputStream = new PrintWriter(socket.getOutputStream(), true);
 
-            outputStream.println("hello world!");
-            outputStream.println("close");
+            outputStream.println("{\"message\":\"hello world!\"}");
+            outputStream.println("{\"message\":\"close\"}");
 
         } catch (Exception e) {
 
